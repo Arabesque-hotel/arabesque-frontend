@@ -1,0 +1,331 @@
+.Rooms {
+  background-color: #1f2c34;
+  padding: 200px 185px 100px 185px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  min-height: calc(100vh - 200px);
+  width: calc(100vw - 370px);
+  color: #fff;
+  gap: 150px;
+
+  .section4 {
+    width: 100%;
+    height: 700px;
+    background: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.3) 0%,
+        rgba(0, 0, 0, 0.3) 100%
+      ),
+      url(../../assets/section4Background.jpg) lightgray 0.106px -1233.437px / 100%
+        426.667% no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    p {
+      color: var(--EDF0F5, #edf0f5);
+      font-family: "Monsieur La Doulaise";
+      font-size: 60px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 60px; /* 100% */
+    }
+    h2 {
+      color: #fff;
+      text-align: center;
+    }
+    button {
+      margin-top: 30px;
+      display: flex;
+      padding: 15px 110px;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      background: var(--FFFFFF, #fff);
+      color: var(--1F2C34, #1f2c34);
+      font-family: Jost;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 20px; /* 125% */
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+
+  .roomWrapper {
+    scroll-behavior: smooth;
+    width: 1080px;
+    gap: 78px;
+    display: flex;
+    justify-content: center;
+    scroll-margin: 250px;
+
+    .information {
+      width: calc(50% - 39px);
+      align-items: flex-start;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 20px;
+
+      .tagWrapper {
+        width: 90%;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 7px;
+        justify-content: flex-start;
+        align-items: center;
+
+        .tagSegment {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 10px;
+          img {
+            width: 16px;
+            height: 16px;
+          }
+        }
+      }
+
+      .infoWrapper {
+        display: flex;
+        gap: 10px;
+        margin-top: 15px;
+        flex-wrap: wrap;
+        .infoSegment {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          .dot {
+            width: 7px;
+            height: 7px;
+            background-color: #fff;
+            border-radius: 100px;
+          }
+        }
+      }
+
+      button {
+        cursor: pointer;
+        margin-top: 30px;
+        display: flex;
+        padding: 15px 90px;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        color: var(--FFFFFF, #fff);
+        font-family: Jost;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 20px; /* 125% */
+        background: var(--394d8b, #394d8b);
+      }
+    }
+    .galleryWrapper {
+      width: 500px;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+        .galleryButton {
+          position: absolute;
+          top: 55%;
+          width: 35px;
+          height: 35px;
+          background: rgb(0,0,0);
+          background: -moz-radial-gradient(circle, rgba(0,0,0,0.28) 0%, rgba(255,255,255,0) 80%);
+          background: -webkit-radial-gradient(circle, rgba(0,0,0,0.28) 0%, rgba(255,255,255,0) 80%);
+          background: radial-gradient(circle, rgba(0,0,0,0.28) 0%, rgba(255,255,255,0) 80%);
+          filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endColorstr="#ffffff",GradientType=1); 
+
+          &:hover {
+            cursor: pointer;            
+            & path {
+              stroke: #1f2c34;
+            }
+            & circle {
+              fill: #fff;
+            }
+          }
+        }
+
+      .dots {
+        display: flex;
+        height: 10px;
+        align-items: center;
+        position: absolute;
+        justify-content: space-between;
+        bottom: -30px;
+
+        .dot {
+          cursor: pointer;
+          transition: 0.1s;
+          border-radius: 20px;
+          margin: 0 1px;
+          width: 8px;
+          height: 8px;
+          background-color: #fff;
+          opacity: 0.6;
+        }
+        .selectedDot {
+          transition: 0.1s;
+          border-radius: 20px;
+          width: 10px;
+          height: 10px;
+          opacity: 1;
+          margin: 0;
+          background-color: #fff;
+        }
+      }
+
+      .gallery {
+        width: 100%;
+        display: flex;
+        overflow-x: hidden;
+        border-radius: 1000px 1000px 0px 0px;
+
+        img {
+          flex-shrink: 0;
+          width: 100%;
+          height: 631px;
+          cursor: grab;
+          &:active {
+            cursor: unset;
+          }
+          object-fit: cover;
+        }
+      }
+    }
+  }
+}
+
+.section4 {
+  width: 100%;
+  height: 700px;
+  background: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.3) 0%,
+      rgba(0, 0, 0, 0.3) 100%
+    ),
+    url(../../assets/section4Background.jpg) lightgray 0.106px -1233.437px / 100%
+      426.667% no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  p {
+    color: var(--EDF0F5, #edf0f5);
+    font-family: "Monsieur La Doulaise";
+    font-size: 60px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 60px; /* 100% */
+  }
+  h2 {
+    color: #fff;
+    text-align: center;
+  }
+  button {
+    margin-top: 30px;
+    display: flex;
+    padding: 15px 110px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background: var(--FFFFFF, #fff);
+    color: var(--1F2C34, #1f2c34);
+    font-family: Jost;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px; /* 125% */
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+@media screen and (max-width: 1080px) {
+  .Rooms {
+    padding: 120px 15px 100px 15px;
+    width: calc(100vw - 30px);
+
+    .roomWrapper {
+      align-items: center;
+      width: 100%;
+
+      .information {
+        button {
+          width: 100%;
+          margin-top: 10px;
+        }
+        width: 100%;
+        h3 {
+          font-size: 38px;
+          line-height: 40px;
+        }
+
+        p {
+          font-size: 16px;
+          line-height: 24px;
+        }
+
+        .infoWrapper {
+          .infoSegment {
+            h6 {
+              font-size: 14px;
+              line-height: 10px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .section4 {
+    height: 600px;
+    p {
+      font-size: 40px;
+      line-height: 40px;
+    }
+    h2 {
+      font-size: 48px;
+      line-height: 50px;
+    }
+    button {
+      margin-top: 20px;
+    }
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .Rooms {
+    .roomWrapper {
+      width: 100%;
+
+      .galleryWrapper {
+        width: calc(100vw - 30px);
+        height: calc(130vw - 30px);
+
+        .dots {
+          max-width: 95%;
+        }
+
+        .gallery {
+          img {
+            width: calc(100vw - 30px);
+            height: calc(130vw - 30px);
+          }
+        }
+      }
+    }
+  }
+}

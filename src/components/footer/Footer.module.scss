@@ -1,0 +1,142 @@
+.footerWrapper {
+  background-color: #1f2c34;
+  padding: 60px 70px 30px 70px;
+  height: 357px;
+  width: calc(100vw - 140px);
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: space-between;
+
+  .infoWrapper {
+    display: flex;
+    justify-content: space-between;
+
+    .logoAndBook {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 30px;
+
+      button {
+        display: flex;
+        padding: 14px 40px;
+        justify-content: center;
+        align-items: center;
+        background: var(--FFFFFF, #fff);
+        color: var(--1F2C34, #1f2c34);
+        font-family: Jost;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 20px; /* 125% */
+        
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+
+    .navigationAndSocial {
+      display: flex;
+      width: 322px;
+      justify-content: space-between;
+
+      .section {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+      }
+
+      h5 {
+        color: var(--FFFFFF, #FFF);
+        font-family: Forum;
+        font-size: 22px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 26px; /* 130% */
+      }
+
+      p {
+        gap: 0;
+        position: relative;
+        color: var(--FFFFFF, #fff);
+        font-family: Jost;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 20px; /* 133.333% */
+
+        &:before {
+          content: "";
+          width: 0;
+          position: absolute;
+          bottom: 0;
+          height: 2px;
+          background-color: #fff;
+          transition: 0.2s;
+        }
+        &:hover {
+          cursor: pointer;
+          &:before {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+  .legalInfo {
+    display: flex;
+    justify-content: space-between;
+    p {
+      color: var(--FFFFFF, #FFF);
+      font-family: Jost;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 300;
+      line-height: 18px; /* 142.857% */      
+    }
+
+    .termsAndPolicy {
+      display: flex;
+      gap: 20px;
+      p {
+        text-decoration: underline;
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width:1080px) {
+  .footerWrapper {
+    height: unset;
+    padding: 40px 15px 30px 15px;
+    width: calc(100vw - 30px);
+    .infoWrapper {
+      flex-direction: column;
+
+      .logoAndBook {
+        svg {
+          width: 185px;
+          height: 40px;
+        }
+      }
+
+      .navigationAndSocial {
+        margin-top: 40px;
+        max-width: 100%;
+        flex-direction: column;
+        gap: 30px;
+      }
+    }
+    .legalInfo {
+      margin-top: 100px;
+      flex-direction: column;
+      gap: 20px;
+    }
+  }
+}

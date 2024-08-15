@@ -1,0 +1,110 @@
+.galleryWrapper {
+  width: 100vw;
+
+  .blueSection {
+    height: 170px;
+    background-color: #394d8b;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 270px 0 160px 0;
+    gap: 20px;
+    h1 {
+        align-self: stretch;
+
+        color: var(--FFFFFF, #FFF);
+        text-align: center;
+        font-family: "Monsieur La Doulaise";
+        font-size: 50px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 50px; /* 100% */
+    }
+    h3 {
+        color: #fff;
+        align-self: stretch;
+        text-align: center;
+    }
+  }
+  .gallerySection {
+    background-color: #edf0f5;
+    padding: 80px 70px 100px 70px;
+    display: flex;
+    gap: 35px;
+    .column {
+        gap: 35px;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        img {
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+  }
+
+  .blueSection2 {
+    width: calc(100% - 20%);
+    padding: 30px 10%;
+    background-color: #394D8B;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    a {
+      color: var(--FFFFFF, #FFF);
+      text-align: center;
+      
+      /* Heading 6 */
+      font-family: Jost;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 26px; /* 144.444% */
+      text-decoration: none;
+    }
+
+    .textSection {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      color: #fff;
+      gap: 10px;
+    }
+  }
+}
+
+
+@media screen and (max-width:1080px) {
+  .galleryWrapper {
+    .blueSection {
+      padding: 220px 15px 210px 15px;
+      h1 {
+        font-size: 40px;
+        line-height: 40px;
+      }
+      h3 {
+        font-size: 38px;
+        line-height: 40px;
+      }
+    }
+
+    .gallerySection {
+      padding: 50px 15px;
+
+      .column {
+        display: none;
+
+        img {
+          height: 410px;
+        }
+      }
+    }
+
+    .blueSection2 {
+      flex-direction: column;
+      gap: 30px;
+    }
+  }
+}

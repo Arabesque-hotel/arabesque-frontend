@@ -1,0 +1,350 @@
+.wrapper {
+  .hero {
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.4) 0%,
+        rgba(0, 0, 0, 0.4) 100%
+      ),
+      url(../../assets/HeroBackground.jpg) lightgray 50% / cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    h2 {
+      color: #fff;
+      text-align: center;
+    }
+  }
+  .infoSection {
+    display: flex;
+    padding: 80px 185px;
+    align-items: flex-start;
+    gap: 70px;
+    align-self: stretch;
+    background: var(--394d8b, #394d8b);
+    justify-content: center;
+
+    .left {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+      width: 45%;
+      p {
+        align-self: stretch;
+
+        color: #fff;
+        font-family: "Monsieur La Doulaise";
+        font-size: 50px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 40px; /* 80% */
+      }
+
+      h3 {
+        color: #fff;
+      }
+    }
+    .right {
+      width: 55%;
+      gap: 50px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      p {
+        color: var(--FFFFFF, #fff);
+
+        /* Paragraph */
+        font-family: Jost;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 26px; /* 162.5% */
+      }
+
+      button {
+        cursor: pointer;
+        display: flex;
+        padding: 15px 60px;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        color: var(--394d8b, #394d8b);
+        font-family: Jost;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 20px; /* 125% */
+        background: var(--EDF0F5, #edf0f5);
+      }
+    }
+  }
+
+  .amenities {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 80px 0px 60px 0px;
+
+    h3 {
+      margin-top: 20px;
+      text-align: center;
+      margin-bottom: 50px;
+    }
+    
+    .gallery {
+      overflow-x: hidden;
+      width: 100vw;
+      height: 560px;
+      display: flex;
+      gap: 30px;
+
+      .image {
+        flex-shrink: 0;
+        width: 630px;
+        height: 100%;
+        position: relative;
+        h4 {
+          color: #fff;
+          position: absolute;
+          bottom: 30px;
+          left: 30px;
+        }
+      }
+    }
+    .dots {
+      width: 100%;
+      justify-content: center;
+      margin-top: 50px;
+      display: flex;
+      gap: 38px;
+      align-items: center;
+      height: 10px;
+      .dot {
+        cursor: pointer;
+        border-radius: 100px;
+        margin: 0 1px;
+        width: 8px;
+        height: 8px;
+        background-color: #717a81;
+        transition: 0.1s;
+      }
+
+      .selectedDot {
+        border-radius: 100px;
+        transition: 0.1s;
+        width: 10px;
+        height: 10px;
+        background-color: #1f2c34;
+      }
+    }
+  }
+
+  .cardsWrapper {
+    display: flex;
+    padding: 50px 185px 100px 185px;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 50px;
+    align-self: stretch;
+
+    .card {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+      width: 30%;
+
+      img {
+        width: 65px;
+        height: 70px;
+        margin-bottom: 10px;
+      }
+
+      h4 {
+        color: #1f2c34;
+      }
+
+      p {
+        align-self: stretch;
+
+        color: var(--1F2C34, #1f2c34);
+        font-family: Jost;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 20px; /* 133.333% */
+      }
+    }
+  }
+
+  .section3 {
+    padding: 70px 70px 90px 70px;
+    width: calc(100% - 140px);
+    height: calc(700px - 180px);
+    background-color: #1F2C34;
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    .happyCustomers {
+      display: flex;
+      position: absolute;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      width: 100%;
+      left: 0;
+      top: 70px;
+      svg {
+        position: absolute;
+        top: 0;
+      }
+      p {
+        margin-top: 39px;
+        color: var(--1F2C34, #fff);
+        font-family: "Monsieur La Doulaise";
+        font-size: 60px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 70px; /* 116.667% */
+      }
+    }
+
+    .reviewButtonWrapper {
+      position: absolute;
+      width: calc(100vw - 140px);
+      display: flex;
+      justify-content: space-between;
+      z-index: 1;
+      .buttons {
+        height: 51px;
+        width: 51px;
+        cursor: pointer;
+      }
+    }
+
+    .reviewsWrapper {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      overflow-x: hidden;
+
+      .review {
+        height: 100%;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-shrink: 0;
+        padding: 0px 150px;
+        width: calc(100% - 300px);
+        text-align: center;
+        color: #fff;
+
+        .reviewerInfo {
+          position: absolute;
+          bottom: 0;
+
+          .stars {
+            margin-top: 10px;
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            align-items: center;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width:1080px) {
+  .wrapper {
+    .hero {
+
+      h2 {
+        font-size: 48px;
+        line-height: 50px;
+      }
+    }
+
+    .infoSection {
+      padding: 70px 15px;
+      flex-direction: column;
+      gap: 30px;
+      .left {
+        width: 100%;
+        gap: 10px;
+        p {
+          font-size: 30px;
+          line-height: 30px;
+        }
+        h3 {
+          font-size: 38px;
+          line-height: 40px;
+        }
+      }
+      .right {
+        width: 100%;
+        gap: 30px;
+        p {
+          font-size: 15px;
+          line-height: 24px;
+        }
+      }
+    }
+    .amenities {
+
+      .gallery {
+        gap: 10px;
+        height: 241px;
+        .image {
+          width: 300px;
+        }
+      }
+    }
+
+    .cardsWrapper {
+      padding: 30px 15px 80px 15px;
+      gap: 30px;
+      .card {
+        width: 100%;
+      }
+    }
+    .section3 {
+      height: unset;
+      padding: 60px 15px;
+      width: calc(100% - 30px);
+      flex-direction: column;
+      gap: 30px;
+      .happyCustomers {
+        top: 0;
+        left: 0;
+        position: relative;
+      }
+      .reviewsWrapper {
+        .review {
+          padding: 0 !important;
+          width: 100%;
+          flex-direction: column;
+          gap: 30px;
+          .reviewerInfo {
+            position: relative;
+          }
+        }
+      }
+      .reviewButtonWrapper {
+        position: relative;
+        gap: 20px;
+        justify-content: center;
+      }
+    }
+  }
+}

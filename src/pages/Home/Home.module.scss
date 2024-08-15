@@ -1,0 +1,548 @@
+.home {
+  width: 100vw;
+
+  .hero {
+    width: 100%;
+    height: 100svh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    h1 {
+      color: #fff;
+      position: relative;
+      top: -12px;
+    }
+
+    p {
+      color: var(--FFFFFF, #fff);
+      font-family: "Monsieur La Doulaise";
+      font-size: 60px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 60px; /* 100% */
+      position: absolute;
+      bottom: 30px;
+    }
+
+    .heroImg {
+      z-index: -1;
+      position: absolute;
+      width: 100%;
+      height: 100svh;
+      object-fit: cover;
+      background: linear-gradient(
+          0deg,
+          rgba(0, 0, 0, 0.4) 0%,
+          rgba(0, 0, 0, 0.4) 100%
+        ),
+        url(../../assets/HeroBackground.jpg) lightgray 50% / cover no-repeat;
+    }
+  }
+
+  .section2 {
+    width: 100%;
+    height: 900px;
+    padding: 80px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    background-color: #edf0f5;
+
+    div {
+      display: flex;
+      gap: 60px;
+      align-items: center;
+
+      video {
+        flex-shrink: 0;
+        width: 450px;
+        height: 600px;
+        border-radius: 600px 600px 0 0;
+        object-fit: cover;
+      }
+
+      div {
+        flex-direction: column;
+        gap: 50px;
+        div {
+          gap: 10px;
+          max-width: 250px;
+          h5 {
+            text-align: start;
+            width: 100%;
+          }
+          p {
+            color: var(--1F2C34, #1f2c34);
+            font-family: Jost;
+            font-size: 15px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 20px; /* 133.333% */
+          }
+        }
+      }
+    }
+    p {
+      color: var(--1F2C34, #1f2c34);
+      font-family: "Monsieur La Doulaise";
+      font-size: 70px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 70px; /* 100% */
+    }
+  }
+
+  .roomsWrapper {
+    width: 100%;
+    height: 1000px;
+    min-height: 800px;
+    position: relative;
+    background-color: #edf0f5;
+
+    .text {
+      z-index: 1;
+      margin-left: 100px;
+      width: 30%;
+      h2 {
+        font-size: 100px;
+        line-height: 100px;
+        color: var(--1F2C34, #1f2c34);
+      }
+
+      p {
+        color: var(--1F2C34, #1f2c34);
+      }
+    }
+
+    .blueWrapper {
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      bottom: 0;
+      width: 100%;
+      height: 50%;
+      background-color: #394d8b;
+
+      .gallery {
+        position: absolute;
+        height: 740px;
+        max-width: 60%;
+        display: flex;
+        gap: 30px;
+        overflow-x: hidden;
+        overflow-y: hidden;
+        right: 0;
+        top: -500px;
+        z-index: 1;
+        scroll-snap-type: x mandatory;
+
+        .imgWrapper {
+          scroll-snap-align: start;
+          position: relative;
+          height: 100%;
+          width: 560px;
+          flex-shrink: 0;
+
+          .imgText {
+            position: absolute;
+            width: calc(100% - 80px);
+            margin: 0 40px;
+            bottom: 40px;
+            color: var(--FFFFFF, #fff);
+            font-family: Forum;
+            font-size: 40px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 50px; /* 125% */
+            z-index: 1;
+          }
+
+          .gradient {
+            pointer-events: none;
+            position: absolute;
+            width: 100%;
+            top: 0;
+            left: 0;
+            height: 100%;
+            background: linear-gradient(
+              180deg,
+              rgba(0, 0, 0, 0) 66.93%,
+              rgba(0, 0, 0, 0.4) 100%
+            );
+          }
+
+          img {
+            object-fit: cover;
+            height: 100%;
+            width: 100%;
+          }
+        }
+      }
+
+      .buttonWrapper {
+        position: absolute;
+        display: flex;
+        gap: 15px;
+        right: calc(60% + 70px);
+        top: 70px;
+
+        .button {
+          &:hover {
+            cursor: pointer;            
+            & path {
+              stroke: #394d8b;
+            }
+            & circle {
+              fill: #fff;
+            }
+          }
+        }
+      }
+
+      .facts {
+        position: absolute;
+        display: flex;
+        justify-content: space-between;
+        bottom: 75px;
+        align-items: flex-start;
+        max-width: 2000px;
+        width: calc(100% - 140px);
+        margin: 0 70px;
+
+        .fact {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          gap: 10px;
+
+          h4 {
+            text-align: center;
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+
+  .section3 {
+    padding: 70px 70px 90px 70px;
+    height: calc(700px - 180px);
+    background-color: #edf0f5;
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    .happyCustomers {
+      display: flex;
+      position: absolute;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      width: 100%;
+      top: 70px;
+      left: 0;
+      img {
+        position: absolute;
+        top: 0;
+      }
+      p {
+        margin-top: 39px;
+        color: var(--1F2C34, #1f2c34);
+        font-family: "Monsieur La Doulaise";
+        font-size: 60px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 70px; /* 116.667% */
+      }
+    }
+
+    .reviewButtonWrapper {
+      position: absolute;
+      width: calc(100vw - 140px);
+      display: flex;
+      justify-content: space-between;
+      z-index: 1;
+      .buttons {
+        height: 51px;
+        width: 51px;
+        cursor: pointer;
+      }
+    }
+
+    .reviewsWrapper {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      overflow-x: hidden;
+
+      .review {
+        height: 100%;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-shrink: 0;
+        padding: 0px 150px;
+        width: calc(100% - 300px);
+        text-align: center;
+        color: #1f2c34;
+
+        .reviewerInfo {
+          position: absolute;
+          bottom: 0;
+
+          .stars {
+            margin-top: 10px;
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            align-items: center;
+          }
+        }
+      }
+    }
+  }
+
+  .section4 {
+    width: 100%;
+    height: 700px;
+    background: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.3) 0%,
+        rgba(0, 0, 0, 0.3) 100%
+      ),
+      url(../../assets/section4Background.jpg) lightgray 0.106px -1233.437px / 100%
+        426.667% no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    p {
+      color: var(--EDF0F5, #edf0f5);
+      font-family: "Monsieur La Doulaise";
+      font-size: 60px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 60px; /* 100% */
+    }
+    h2 {
+      color: #fff;
+      text-align: center;
+    }
+    button {
+      margin-top: 30px;
+      display: flex;
+      padding: 15px 110px;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      background: var(--FFFFFF, #fff);
+      color: var(--1F2C34, #1f2c34);
+      font-family: Jost;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 20px; /* 125% */
+      cursor: pointer;
+    }
+  }
+
+  .section5 {
+    width: 100%;
+    min-height: 900px;
+    display: flex;
+    flex-direction: column;
+
+    .blueSection {
+      width: calc(100% - 20%);
+      padding: 30px 10%;
+      background-color: #394d8b;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      a {
+        color: var(--FFFFFF, #FFF);
+        text-align: center;
+        
+        /* Heading 6 */
+        font-family: Jost;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 26px; /* 144.444% */
+        text-decoration: none;
+      }
+
+      .textSection {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        color: #fff;
+        gap: 10px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1080px) {
+  .home {
+    .hero {
+      h1 {
+        font-size: 70px;
+        line-height: 72px;
+        text-align: center;
+      }
+      p {
+        font-size: 40px;
+      }
+    }
+
+    .section2 {
+      height: unset;
+
+      div {
+        width: 100%;
+        flex-direction: column;
+        div {
+          width: 193px;
+        }
+        video {
+          width: 350px;
+          height: 480px;
+        }
+      }
+
+      p {
+        font-size: 56px;
+        line-height: 50px;
+      }
+    }
+
+    .roomsWrapper {
+      height: unset;
+      width: calc(100% - 30px);
+      padding: 0 15px;
+
+      .text {
+        width: 100%;
+        margin: 0;
+        margin-bottom: calc(34px + (128.333333vw - 30px) / 2);
+        h2 {
+          font-size: 48px;
+          line-height: 50px;
+        }
+      }
+
+      .gallery {
+        position: absolute;
+        right: unset;
+        top: calc((128.333333vw - 30px) / -2) !important;
+        left: 15px !important;
+        width: calc(100vw - 30px) !important;
+        height: calc(128.333333vw - 30px) !important;
+        max-width: unset !important;
+
+        .imgWrapper {
+          width: 100% !important;
+          .imgText {
+            font-size: 30px !important;
+            line-height: 30px !important;
+            margin-left: 30px;
+            bottom: 30px;
+          }
+        }
+      }
+      .blueWrapper {
+        width: 100vw;
+        left: -15px;
+        padding-top: calc((128.333333vw - 30px) / 2);
+        position: relative;
+        flex-direction: column;
+        justify-content: unset;
+        z-index: 0;
+        .buttonWrapper {
+          position: relative;
+          top: unset;
+          width: 115px;
+          right: unset;
+          left: 15px;
+          margin-top: 15px;
+        }
+
+        .facts {
+          position: relative;
+          width: 100%;
+          margin: 0;
+          margin-top: 50px;
+          margin-bottom: 80px;
+          bottom: 0;
+          flex-wrap: wrap;
+          justify-content: center;
+
+          .fact {
+            width: 175px;
+          }
+        }
+      }
+    }
+    .section3 {
+      height: unset;
+      padding: 60px 15px;
+      width: calc(100% - 30px);
+      flex-direction: column;
+      gap: 30px;
+      .happyCustomers {
+        width: 100%;
+        top: 0;
+        left: 0;
+        position: relative;
+      }
+      .reviewsWrapper {
+        .review {
+          padding: 0 !important;
+          width: 100%;
+          flex-direction: column;
+          gap: 30px;
+          .reviewerInfo {
+            position: relative;
+          }
+        }
+      }
+      .reviewButtonWrapper {
+        position: relative;
+        gap: 20px;
+        justify-content: center;
+      }
+    }
+    .section4 {
+      height: 600px;
+      p {
+        font-size: 40px;
+        line-height: 40px;
+      }
+      h2 {
+        font-size: 48px;
+        line-height: 50px;
+      }
+      button {
+        margin-top: 20px;
+        padding: 15px 60px;
+      }
+    }
+
+    .section5 {
+      .blueSection {
+        flex-direction: column;
+        gap: 30px;
+      }
+    }
+  }
+}
